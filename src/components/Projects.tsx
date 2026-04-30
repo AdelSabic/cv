@@ -4,7 +4,7 @@ import './Projects.css';
 
 const Projects: React.FC = () => {
     const { t } = useLanguage();
-    const projects = t.projectsData.map((project, index) => ({
+    const projects = t.projectsData.map((project) => ({
         ...project,
         link: '#'
     }));
