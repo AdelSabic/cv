@@ -1,0 +1,124 @@
+.language-selector-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.language-selector-content {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease-out;
+}
+
+.language-selector-content h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-weight: 700;
+}
+
+.language-selector-content p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+}
+
+.language-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.language-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 2rem 1.5rem;
+    border: 3px solid #e0e0e0;
+    background: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 150px;
+}
+
+.language-button:hover {
+    border-color: #667eea;
+    background: #f8f9fa;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+}
+
+.language-button.english:hover {
+    border-color: #667eea;
+}
+
+.language-button.bosnian:hover {
+    border-color: #764ba2;
+}
+
+.language-button .flag {
+    font-size: 3rem;
+    display: block;
+}
+
+.language-button .name {
+    color: #333;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .language-selector-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .language-selector-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .language-buttons {
+        flex-direction: column;
+    }
+
+    .language-button {
+        min-width: 100%;
+    }
+}
